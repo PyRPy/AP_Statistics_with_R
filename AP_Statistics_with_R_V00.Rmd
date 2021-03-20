@@ -1,0 +1,26 @@
+---
+title: "AP Statistics with R"
+author: "ETF Researcher"
+date: "March 20, 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## AP Statistics with R
+```{r message=FALSE, warning=FALSE}
+library(imager)
+```
+```{r}
+img <- load.image("start_slide.png")
+```
+
+```{r}
+plot(img)
+```
+
+Thank you !
+* Reference for : how to load an image into R Markdown or R
+* https://www.rdocumentation.org/packages/imager/versions/0.42.7/topics/load.image
