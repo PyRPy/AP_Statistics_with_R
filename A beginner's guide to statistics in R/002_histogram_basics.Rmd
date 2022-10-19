@@ -1,0 +1,23 @@
+---
+title: "002_histogram_basic"
+output: html_document
+date: "2022-10-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## produce 100 random numbers
+```{r}
+random_numbers <- rnorm(100, 0, 1)
+```
+```{r}
+hist(random_numbers)
+```
+
+## look into the function for help
+```{r}
+hist(random_numbers, breaks = 20)
+```
+

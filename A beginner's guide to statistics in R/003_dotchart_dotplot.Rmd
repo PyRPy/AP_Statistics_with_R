@@ -1,0 +1,21 @@
+---
+title: "003_dotchart_dotplot"
+output: html_document
+date: "2022-10-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## let's produce some numbers
+```{r}
+myNumbers <- c(1,1,1,2,2,3,3,3,3,3,5,5,10,10,11,2,2, 8, 8, 8, 9, 8, 8, 8)
+
+```
+
+## dotchart
+```{r}
+dotchart(myNumbers)
+```
+

@@ -1,0 +1,28 @@
+---
+title: "001_random_numbers"
+output: html_document
+date: "2022-10-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## how to produce random numbers and plot its profile
+```{r}
+random_numbers <- rnorm(100, 0, 1)
+
+```
+```{r}
+head(random_numbers)
+```
+
+## this produces 100 random numbers with normal distribution
+```{r}
+plot(random_numbers)
+abline(h=0)
+```
+
+```{r}
+hist(random_numbers)
+```
+

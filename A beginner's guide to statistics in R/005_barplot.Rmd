@@ -1,0 +1,22 @@
+---
+title: "005_barplot"
+output: html_document
+date: "2022-10-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# let's construct a data frame or just a table
+myTable <- data.frame(classes = c(1, 2, 3, 4, 5), hours = c(3, 3, 2, 2, 2))
+
+```
+
+
+```{r}
+# bar plot
+barplot(hours ~ classes, data = myTable)
+```
+
