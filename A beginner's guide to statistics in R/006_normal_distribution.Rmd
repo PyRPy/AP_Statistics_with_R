@@ -1,0 +1,38 @@
+---
+title: "normal distribution"
+output: html_document
+date: "2022-10-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# get some numbers
+myNormalNumbers <- rnorm(10000, 0, 1)
+```
+```{r}
+# histogram
+hist(myNormalNumbers)
+```
+## the key question is:
+## like a 'bell' ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
