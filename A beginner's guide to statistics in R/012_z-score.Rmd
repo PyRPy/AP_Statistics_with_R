@@ -1,0 +1,49 @@
+---
+title: "z-score"
+output: html_document
+date: "2022-11-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## find z-score
+```{r}
+myNumbers <- c(3, 2, 4, 6, 1, 6, 9, 11, 3, 4)
+```
+
+```{r}
+sample_mean = mean(myNumbers)
+```
+```{r}
+sample_sd = sd(myNumbers)
+```
+
+## find 9's z-score in this sample
+```{r}
+(9 - sample_mean) / sample_sd
+```
+
+## use scale() in R
+```{r}
+scale(myNumbers)[7]
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

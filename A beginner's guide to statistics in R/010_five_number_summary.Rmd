@@ -1,0 +1,49 @@
+---
+title: "Five number summary"
+output: html_document
+date: "2022-11-02"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# let's create some numbers 
+myNumbers <- c(3, 2, 4, 6, 1, 6, 9, 11, 3, 4)
+```
+
+```{r}
+# just simply use 'summary()' function in R
+summary(myNumbers)
+```
+
+## then you get 5 number summary
+## min, Q1, Q3, median, max
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

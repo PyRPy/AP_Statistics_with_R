@@ -1,0 +1,49 @@
+---
+title: "boxplot"
+output: html_document
+date: "2022-11-04"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## how to produce a boxplot in R
+```{r}
+# get some numbers first
+myNumbers <- c(3, 2, 4, 6, 1, 6, 9, 11, 3, 4)
+```
+
+```{r}
+# boxplot in R
+boxplot(myNumbers, horizontal = TRUE)
+```
+
+```{r}
+# compare to 5 numbers in summary
+summary(myNumbers)
+```
+## median is 4, bold line in the middle of 'box'
+
+## we may have an outlier !
+## which is 11 !
+# THANKS FOR WATCHING !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

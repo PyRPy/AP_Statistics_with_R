@@ -1,0 +1,49 @@
+---
+title: "var and std"
+output: html_document
+date: "2022-10-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Variance and standard deviation
+```{r}
+# let's get some numbers
+myNumbers <- c(2, 4, 3, 8, 1, 11, 14, 0, 3, 12)
+
+```
+
+```{r}
+# find the variance
+var(myNumbers)
+```
+```{r}
+# find the sd
+sd(myNumbers)
+```
+# how to find the relationship between variance and sd ?
+```{r}
+sqrt(var(myNumbers))
+```
+```{r}
+sqrt(var(myNumbers)) == sd(myNumbers)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

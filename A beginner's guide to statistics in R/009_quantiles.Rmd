@@ -1,0 +1,49 @@
+---
+title: "quantiles"
+output: html_document
+date: "2022-10-29"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# let's work on hwo to find quantiles
+```{r}
+# assume we have these numbers:
+myNumbers <- c(3, 2, 4, 6, 1, 6, 9, 11, 3, 4)
+```
+
+```{r}
+# find quantiles
+quantile(myNumbers)
+```
+
+```{r}
+quantile(myNumbers, 0.5)
+
+# this is equivalent to find 'median' in the numbers
+```
+
+# Inter Quantiles 
+
+# we know the quantiles here:
+# 0%  25%  50%  75% 100% 
+# 1    3    4    6   11 
+```{r}
+# so the IQR is 3
+IQR(myNumbers) # THERE IS A FUNCTION IN R
+```
+# THANKS FOR WATCHING :-)
+
+
+
+
+
+
+
+
+
+
+
+
