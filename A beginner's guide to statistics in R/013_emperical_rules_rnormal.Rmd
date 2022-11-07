@@ -1,0 +1,59 @@
+---
+title: "emperical rules for std"
+output: html_document
+date: "2022-11-07"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## emperical rule for standard normal distribution
+```{r}
+# for a normal distribution
+rnorm(100, 0, 1)
+```
+
+```{r}
+# you can plot it
+plot(rnorm(10000, 0, 1))
+```
+
+```{r}
+# too crowded, let's use histrogram in this case
+hist(rnorm(10000, 0, 1))
+```
+
+## a very good 'bell' shape distribution
+
+```{r}
+# for a number like 3, it is far away from the center 0:
+# what's the chance for it to be '3'
+pnorm(3, 0, 1)
+```
+
+```{r}
+# how about -3
+pnorm(-3, 0, 1)
+```
+
+```{r}
+# so let's find the 'total probability' between -3 and 3
+pnorm(3, 0, 1) - pnorm(-3, 0, 1)
+```
+
+## we got 99.7%
+
+```{r}
+# in this fashion we can find :
+pnorm(2, 0, 1) - pnorm(-2, 0, 1)
+```
+
+```{r}
+pnorm(1, 0, 1) - pnorm(-1, 0, 1)
+# 68.2% roughly
+```
+
+## these three numbers : 68, 95, and 99.7 are the rule of thumb numbers !
+
+## THANKS FOR WATCHING !
