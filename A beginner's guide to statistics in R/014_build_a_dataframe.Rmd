@@ -1,0 +1,31 @@
+---
+title: "create a table or data frame"
+output: html_document
+date: "2022-11-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## assume a dog , how much a dog eat every day, 
+## as a dog grows up (a puppy this case)
+```{r}
+cups <- c(1, 2, 3, 3, 4, 5, 7, 8, 8, 9)
+age <- c(1, 2, 3, 4, 5, 6, 7, 8, 9 , 10) # weeks
+```
+
+## build a table or data frame in R
+```{r}
+myDogFood <- data.frame(cups, age)
+```
+
+## display it
+```{r}
+myDogFood
+```
+## check the type of the new table
+```{r}
+class(myDogFood)
+```
+
