@@ -1,0 +1,49 @@
+---
+title: "residules"
+output: html_document
+date: "2022-11-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How good is your model
+## learn how to look at residules from your model
+```{r}
+# build x, y data first
+x <- 1:100
+```
+```{r}
+# create y response
+y <- 5 + 2 * x + rnorm(100) * 5 # add noise rnorm(100)
+
+```
+
+```{r}
+# linear model
+linearReg <- lm(y ~ x)
+summary(linearReg)
+```
+## get coefficient b = 1.9, close to 2.0
+
+```{r}
+# plot y vs residuals in this case
+plot(y, residuals(linearReg))
+abline(h = 0)
+```
+## fairly 'normally' distributed below and above the line 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

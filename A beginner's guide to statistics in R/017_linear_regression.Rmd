@@ -1,0 +1,47 @@
+---
+title: "linear regression"
+output: html_document
+date: "2022-11-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## assume a dog , how much a dog eat every day, 
+## as a dog grows up (a puppy this case)
+```{r}
+myDogFood <- data.frame(
+            cups = c(1, 2, 3, 3, 4, 5, 7, 8, 8, 9), 
+            age = c(1, 2, 3, 4, 5, 6, 7, 8, 9 , 10)
+                        )
+```
+
+## use lm() to build a linear model
+```{r}
+linearReg <- lm(cups ~ age, data = myDogFood)
+```
+
+## plot regression line with original data points
+```{r}
+
+plot(myDogFood$age, myDogFood$cups)
+abline(linearReg, col='blue')
+```
+```{r}
+# let's look at the summary
+summary(linearReg)
+```
+## intercept is -0.06667 
+## coefficient : 0.921 , y = a + bx, here b = 0.921
+## p-value < 0.05, significant
+
+
+
+
+
+
+
+
+
+

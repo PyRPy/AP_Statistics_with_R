@@ -1,0 +1,62 @@
+---
+title: "R-Square"
+output: html_document
+date: "2022-11-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How good is your model
+## learn how to look at R2 or R square from model results
+```{r}
+# build x, y data first
+x <- 1:100
+```
+```{r}
+# create y response
+y1 <- 5 + 2 * x + rnorm(100) * 5 # add noise rnorm(100)
+
+```
+
+```{r}
+# linear model
+linearReg1 <- lm(y1 ~ x)
+summary(linearReg1)
+```
+## get R2 or R square 0.99
+
+```{r}
+# create y response
+y2 <- 5 + 2 * x + rnorm(100) * 50 # add noise rnorm(100)
+
+```
+
+```{r}
+# linear model
+linearReg2 <- lm(y2 ~ x)
+summary(linearReg2)
+```
+## get R2 or R square 0.62
+
+## look at the scatter plots
+```{r}
+plot(x, y1)
+```
+
+```{r}
+plot(x, y2)
+```
+
+## what do you think?
+
+
+
+
+
+
+
+
+
+
