@@ -1,0 +1,40 @@
+---
+title: "outlier"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## how to spot an outlier(s)
+```{r}
+# let's get some data first
+# let's change one of the cups values, at age = 8
+cups <- c(1, 2, 3, 3, 4, 5, 7, 18, 8, 9)
+age <- c(1, 2, 3, 4, 5, 6, 7, 8, 9 , 10) # weeks
+```
+
+```{r}
+# create a data frame in R
+myDogFood <- data.frame(cups, age)
+```
+```{r}
+# linear model
+linearReg <- lm(cups ~ age)
+```
+```{r}
+# run the summary to find the R2
+summary(linearReg)
+```
+## R-squared:  0.557, very low now compared to before (> 0.9)
+## The outlier has significant impact on R-Square
+```{r}
+plot(age, cups) # plot it again
+abline(linearReg)
+```
+## well, it not very nice, there is an outlier at age = 8 !
+```{r}
+max(abs(residuals(linearReg)))
+```
+

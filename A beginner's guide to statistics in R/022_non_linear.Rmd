@@ -1,0 +1,38 @@
+---
+title: "non-linear"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## non-linear relationship between two variables
+```{r}
+# create data first
+x <- 0:20
+y <- x^2 + rnorm(21) * 0.5
+```
+
+```{r}
+# plot
+plot(x, y)
+```
+
+## we can see, it is not a straight line anymore
+## what we can do ? transform it !
+
+```{r}
+y_sqrt <- sqrt(y)
+
+plot(x, y_sqrt)
+# almost a straight line
+```
+
+```{r}
+# let's take a look at the original data
+summary(lm(y ~ x))
+```
+
+## R2 is 0.93, but the linear model would be a bad fit !
+## A high R-square from a linear regression is not necessarily a good fit
