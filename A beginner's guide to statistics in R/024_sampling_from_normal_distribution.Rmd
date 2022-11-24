@@ -1,0 +1,39 @@
+---
+title: "sample from normal distribution"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Sampling from a normal distribution
+```{r}
+# is the data you collected representative ?
+# let's create a random sample, size = 10000, mean = 0, std = 1
+# then, collect samples
+
+myNumbers <- rnorm(10000, 0, 1)
+```
+
+```{r}
+# histograms
+hist(myNumbers)
+```
+
+## fairly 'bell' shape, it is a normal distribution
+
+```{r}
+# collect some sampling here, 100 out of 1000
+samples_1000 = sample(myNumbers, 1000)
+hist(samples_1000)
+```
+## 1000 out of 10,000, fairly normal shape
+
+```{r}
+# collect some sampling here, 100 out of 10000
+samples_100 = sample(myNumbers, 100)
+hist(samples_100)
+```
+
+## smaller sample size, sometimes it does not look like a normal distribution

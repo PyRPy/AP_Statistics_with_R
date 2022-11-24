@@ -1,0 +1,44 @@
+---
+title: "EDA on data"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exploratory Data Analysis (EDA)
+## let's explore the data first, before we do linear regression
+## this is called 'EDA' or exploratory data analysis
+
+## data set 'bread' from 'daewr' package in R
+
+```{r}
+# get the data
+data_url = "https://raw.githubusercontent.com/PyRPy/AP_Statistics_with_R/main/Data/bread.csv"
+bread <- read.csv(data_url, sep = ",", header = TRUE)
+```
+
+```{r}
+# you can also show a few lines of data
+head(bread, 3)
+```
+```{r}
+# do a conversion on the data type
+bread$time <- as.factor(bread$time)
+```
+
+```{r}
+# let's do some graphs on the data
+boxplot(bread[, 2:3])
+```
+```{r}
+# not what we want
+with(data = bread,
+     plot(height ~ time))
+```
+## we can see that with different time for baking the rising height are different
+
+
+
+

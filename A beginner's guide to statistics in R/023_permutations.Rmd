@@ -1,0 +1,22 @@
+---
+title: "permutations"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Random permutations
+```{r}
+# how to make random permutation, use dice as an example
+dice <- 1:6
+dice
+```
+
+```{r}
+# let's shuffle the numbers
+sample(dice)
+```
+
+## every time you run, it generates different sequence!
