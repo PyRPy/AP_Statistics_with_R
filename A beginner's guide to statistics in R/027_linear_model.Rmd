@@ -1,0 +1,39 @@
+---
+title: "linear model"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##  build a linear model on the experiment data
+```{r}
+# get the data from internet (cloud, storage or equivalent)
+data_url = "https://raw.githubusercontent.com/PyRPy/AP_Statistics_with_R/main/Data/bread.csv"
+bread <- read.csv(data_url, sep = ",", header = TRUE)
+```
+```{r}
+bread$time <- as.factor(bread$time) # convert types for analysis
+```
+
+```{r}
+# we can find the variations in the plot
+
+linearModel <- lm(height ~ time, data = bread)
+```
+
+```{r}
+# take a look at the summary
+summary(linearModel)
+```
+
+## it uses time35 as baseline for comparison
+## p-value: 0.042, time as a factor is signficant
+## the R square is about 0.51, not ideal in this case
+
+
+
+
+
+

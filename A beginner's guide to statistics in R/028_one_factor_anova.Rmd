@@ -1,0 +1,33 @@
+---
+title: "anova"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## conduct anova for the data set (bread, our favorite one)
+## how do you tell one factor in an experiment actually makes a difference
+```{r}
+# get the data from internet (cloud, storage or equivalent)
+data_url = "https://raw.githubusercontent.com/PyRPy/AP_Statistics_with_R/main/Data/bread.csv"
+bread <- read.csv(data_url, sep = ",", header = TRUE)
+```
+
+## build a linear model
+```{r}
+bread$time <- as.factor(bread$time) # do not forget this step
+linearModel <- lm(height ~ time, data = bread)
+```
+
+## anova on the data
+```{r}
+# do a anova , anova, how it came together !
+anova(linearModel)
+```
+
+## p-value 0.042 is less than 0.05, which means the time factor
+## does make a significant differece in the experiment, or
+
+## it has a very low chance ( < 0.42% ) that this factor (time) is a noise
