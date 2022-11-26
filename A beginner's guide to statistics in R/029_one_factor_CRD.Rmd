@@ -1,0 +1,34 @@
+---
+title: "CRD"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## one factor complete random design (CRD)
+## examples from 'daewr' package in CRAN
+## measuring effects on bread rising height 
+## from time and other factors
+```{r}
+set.seed(2021)
+f <- factor(rep(c(35, 40, 45), each = 4))
+f
+```
+
+```{r}
+fac <- sample(f, 12) # reshuffle, or randomize it
+fac
+```
+```{r}
+eu <- 1:12 # experiment unit number, just a ID type
+test_plan <- data.frame(loaf = eu, time = fac) # we knew this before
+test_plan
+```
+## first key concept is : to assign your experiment unit 'randomly'
+
+## second key concept is: to 'repeat' what you want to do 
+
+## third key concept is: blocking, if you cannot control it, you have to mark 
+## it intentionally, and figure it out later when do the variance analysis, 
