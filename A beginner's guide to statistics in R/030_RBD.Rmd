@@ -1,0 +1,44 @@
+---
+title: "CBD"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# ------ Design and Analysis  of Experiments with R 2017 ------ #
+## this example from the book above
+
+## background information for the experiment
+## use 4 types of water to irrigate the flowers - this is 'treatment'
+## there are also 4 types of flowers
+## here the blocks are 'flowers'
+## each of the four types of flower forms a 'block'
+
+## let's use 'agricolae' package to do the RBD experiment design
+## install.packages('agricolae') # if not installed
+
+```{r}
+# load the library
+library(agricolae)
+```
+
+```{r}
+trt <- c(1, 2, 3, 4) # for four types of water
+outdesign <- design.rcbd(trt, 4, seed = 2022)
+rcb <- outdesign$book
+```
+
+```{r}
+# rename the levels
+levels(rcb$block) <- c("carnation", "daisy", "rose", "tulip") 
+```
+```{r}
+# then you got the design
+rcb
+```
+
+
+
+
