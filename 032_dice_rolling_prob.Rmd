@@ -1,0 +1,54 @@
+---
+title: "rolling dice"
+output: html_document
+date: "2022-12-02"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## rolling a dice, how to simulate it
+```{r}
+# Dice example as our favorite !
+# it has 6 faces
+dice <- c(1, 2, 3, 4, 5, 6)
+```
+
+```{r}
+sample(dice, 1, replace = TRUE) 
+# every time, it gives you a random choice
+```
+
+## each number has a chance of 1/6 being selected
+## we will do it 100,000 times
+```{r}
+# we can define a variable to store the numbers
+myRoll <- replicate(100000, sample(dice, 1, replace = TRUE))
+```
+
+```{r}
+# how many 2s we got from these 100,000 rollings
+sum(myRoll == 2)
+```
+
+```{r}
+# in R, we can do it like this:
+sum(myRoll == 2) / length(myRoll)
+
+```
+
+```{r}
+# it is close to 1/6 or
+1/6
+```
+
+
+
+
+
+
+
+
+
+

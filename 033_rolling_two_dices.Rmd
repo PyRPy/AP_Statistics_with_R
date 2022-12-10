@@ -1,0 +1,50 @@
+---
+title: "prob of rolling two dice"
+output: html_document
+date: "2022-12-10"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Rolling two dices, and find out dice1 + dice2 = 7 ?
+```{r}
+# simulate two dice
+dice1 <- c(1, 2, 3, 4, 5, 6)
+dice2 <- c(1, 2, 3, 4, 5, 6)
+```
+
+```{r}
+# the number of experiments you want to run
+numOfExp <- 10000
+equalTo7 <- 0 # how many times the summation is equal to 7
+```
+
+```{r}
+# let's write a loop and also do some conditional selections
+for (i in 1:numOfExp) {
+  sum2 = sample(dice1, 1, replace = TRUE) + 
+         sample(dice2, 1, replace = TRUE)
+  if (sum2 == 7) {
+    equalTo7 = equalTo7 + 1 # use it as a counter here
+  }
+}
+```
+
+```{r}
+probSum7 = equalTo7 / numOfExp
+probSum7
+```
+
+## very close to 0.1667
+## in theory, you have 6 events out of 36 sample space
+## so, pob is 6/ 36 = 1 /6 = 0.1667 approximately.
+
+
+
+
+
+
+
+
