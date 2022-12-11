@@ -1,0 +1,49 @@
+---
+title: "flip a fair coin"
+output: html_document
+date: "2022-12-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## simulate 'flip a coin' in R
+```{r}
+# head and tail, two equal possibilities, it is a fair coin
+sample(c("H", "T"), 1, replace = TRUE)
+```
+
+```{r}
+# let's run it 10 time once
+sample(c("H", "T"), 10, replace = TRUE)
+```
+```{r}
+# let's flip 1000 times !
+results <- sample(c("H", "T"), 1000, replace = TRUE)
+sum(results == "H") / 1000
+```
+
+## it's close to 50/50, though not exactly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
