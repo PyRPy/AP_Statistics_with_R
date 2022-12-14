@@ -1,0 +1,49 @@
+---
+title: "normal distribution"
+output: html_document
+date: "2022-12-11"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## simulate a normal distribution
+```{r}
+# generate random numbers for a 'normal' distribution
+rnorm(100, mean = 10, sd = 5)
+```
+```{r}
+# store the numbers
+myNumbers <- rnorm(1000, mean = 10, sd = 5)
+```
+
+```{r}
+# histograms
+hist(myNumbers)
+```
+## most often, the random numbers fall between 0 and 20
+## the rule of thumb is: 95% of numbers is within 2 x sd = 5
+## of the mean, which is 10, (10-2x5, 10 + 2x5 ) or (0, 20)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+---
+title: "CLT"
+output: html_document
+date: "2022-12-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## let's look at the 'central limit theory' in an experiment
+```{r}
+# get some numbers from a geometric distribution
+myGeomNumbers <- rgeom(10000, 0.1)
+hist(myGeomNumbers)
+```
+
+## what's the mean
+```{r}
+mean(myGeomNumbers)
+```
+
+```{r}
+# we can also store the restuls
+smallSamples <- replicate(1000, sample(myGeomNumbers, 5))
+```
+
+```{r}
+hist(colMeans(smallSamples)) 
+# we can get the mean for each sample this way
+```
+# it is not normal, close to the original distribution
+# small samples get a skewed distribution for sample mean
+
+```{r}
+# let's increase the sample size
+largeSamples <- replicate(1000, sample(myGeomNumbers, 30)) 
+```
+
+```{r}
+# n = 30 samplesize
+hist(colMeans(largeSamples)) # fairly normal shape now !
+
+```
+
+# when you increase the sample size to n, like 30, 
+# your sample mean, closer to a normal distribution, 
+# when repeat it again and again
+
+
+
+
+
+
