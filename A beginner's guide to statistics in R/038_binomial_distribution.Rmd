@@ -1,0 +1,49 @@
+---
+title: "binomial"
+output: html_document
+date: "2022-12-15"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## there are 3 balls in a jar, with color of red, blue, 
+## and green, the sampling with replacement, means select 
+## one ball, then put it back
+
+## if we do a binomial test, kind of, the results are:
+## sample size / number of experiment 30 ; 
+## we do the test for 30 times
+##probability for a red ball is selected : 1/3 or 0.333
+
+```{r}
+# in R, we can do this
+rbinom(1, size = 30, prob = 0.333) 
+# we got 10 times for red ball
+
+```
+
+```{r}
+# we can also do this
+rbinom(10, size = 30, prob = 0.333)
+```
+
+```{r}
+# the average number of how many times a red ball is sampled:
+mean(rbinom(10, size = 30, prob = 0.333))
+```
+
+## size * prob = 30 x 0.333 = 10, yes it is close
+
+
+
+
+
+
+
+
+
+
+
+

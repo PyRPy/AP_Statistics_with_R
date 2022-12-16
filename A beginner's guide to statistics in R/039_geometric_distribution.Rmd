@@ -1,0 +1,39 @@
+---
+title: "geometric"
+output: html_document
+date: "2022-12-16"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## geometric distribution
+```{r}
+myGeomNumbers <- rgeom(10000, 0.1)
+```
+
+```{r}
+# distribution plot
+hist(myGeomNumbers)
+```
+```{r}
+# mean of the numbers generated
+mean(myGeomNumbers)
+```
+```{r}
+# the mean or 'expectation' of the average number before you find a failure
+1 / 0.1 - 1 
+```
+
+## estimate is close to 9
+
+
+
+
+
+
+
+
+
+
