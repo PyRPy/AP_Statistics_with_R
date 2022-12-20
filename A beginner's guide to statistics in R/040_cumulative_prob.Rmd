@@ -1,0 +1,49 @@
+---
+title: "Cumulative prob"
+output: html_document
+date: "2022-12-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## how to calculate cumulative probabilities
+```{r}
+# get some random numbers
+myNumbers <- rnorm(1000, 0, 2) # sd = 2, mean = 0
+hist(myNumbers)
+```
+## it's a normal distribution
+
+## what's a number that has a chance, less than -4 ?
+## it is 2 x sd away from the center point or 0 in this case
+```{r}
+pnorm(-4, 0, 2) # fairly small
+```
+
+```{r}
+# how about x > 4, should be same, it is symmetrical !
+ 1 - pnorm(4, 0, 2)
+```
+
+```{r}
+# how about between -4 and 4
+pnorm(4, 0, 2) - pnorm(-4, 0, 2)
+```
+## 0.9544997 or 95%, 
+## one of the numbers from the 'rule of thumb' !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
