@@ -1,0 +1,49 @@
+---
+title: "hypothesis test - proportion"
+output: html_document
+date: "2022-12-21"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hypothesis test for a porpotion
+## for a normal distribution
+## for a signficance level of alpha = 0.05
+
+## Ho : p = 1 / 6
+## Ha : p > 1 / 6
+
+```{r}
+n = 6000
+ones = 1050
+p0 = 1/6
+alpha = 0.05
+```
+
+```{r}
+# find the z score for the test
+Z_dice = (ones/n - p0) / sqrt(p0*(1-p0)/n)
+Z_dice # 0.7967434
+```
+
+```{r}
+# find the critical value for Z with 0.05 signficance level
+Z_critical = qnorm(1 - alpha)
+Z_critical # 1.644854
+```
+
+```{r}
+if(Z_dice > Z_critical) {
+  cat("Reject the null hypothesis")
+} else {
+  cat("Failed to reject the null hypothesis")
+}
+```
+
+
+
+
+
+

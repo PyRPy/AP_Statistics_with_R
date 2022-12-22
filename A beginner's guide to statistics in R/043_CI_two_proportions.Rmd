@@ -1,0 +1,49 @@
+---
+title: "test for two proportions"
+output: html_document
+date: "2022-12-22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Tests for the difference of 2 proportions 
+
+## A groceries store want to upgrade its website, 
+## so it can promote the salse online. They arranged to 
+## conduct a survey before and after the upgrade.
+
+## Before the change there are 671 out of 1000 people, 
+## who are positive about the website, while it has 649 
+## out of 950 peope, who are in favor of the 'new' design. 
+
+## Do you think the new desing made a difference or not ?
+
+## We can construct a confidence interval to see this
+
+```{r}
+p1 = 671 / 1000
+n1 = 1000
+
+p2 = 649 / 950
+n2 = 950
+```
+
+```{r}
+## we will use 95% confidence level, which has a 
+## Z-score 1.96 as approximation 
+Z_score = 1.96
+```
+
+```{r}
+# CI is calculated use a list in R
+(p2 - p1) + c(-Z_score * sqrt(p2*(1-p2)/n2 + p1*(1-p1)/n1),
+            Z_score * sqrt(p2*(1-p2)/n2 + p1*(1-p1)/n1))
+```
+
+## CI -0.02935546  0.05367125
+## it is include 0, in this interval, so, 
+## the difference between the new and
+## old website is not significant. No difference made. 
+
